@@ -1,0 +1,23 @@
+<p-card header="{{product.name}}"  styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+      <img height="" [src]="product.image">
+  </ng-template>
+  <div>
+    <label>{{'PRODUCT.MANUFACTURER' | translate}}:&nbsp;</label>
+    <span>{{product.manufacturer.name}}</span>
+  </div>
+  <div>
+    <label>{{'PRODUCT.EXPIRY_DATE' | translate}}:&nbsp;</label>
+    <span>{{product.expiryDate | date: 'dd.mm.yyyy'}}</span>
+  </div>
+  <div>
+    <label>{{'PRODUCT.PRICE' | translate}}:&nbsp;</label>
+    <span class="semi-bold">{{product.price}}</span>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="button-section">
+      <p-button class="mr-10" label="{{'BUTTONS.EDIT' | translate}}" [routerLink]="['/product/edit/' + product.id]"></p-button>
+      <p-button label="{{'BUTTONS.DELETE' | translate}}" styleClass="p-button-secondary" (click)="onDelete()"></p-button>
+    </div>
+  </ng-template>
+</p-card>

@@ -1,0 +1,44 @@
+@import 'styles';
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: inherit;
+  padding: 20px 0;
+
+  &__item {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    margin: 10px 0;
+
+    label {
+      width: 120px;
+    }
+  }
+}
+
+.wrapper {
+  width: 500px;
+  background-color: $color-grey-light-1;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+}
+
+.p-inputtext {
+  width: 250px;
+  padding: 5px 10px;
+}
+
+::ng-deep   .p-button.p-button-secondary {
+  width: 250px;
+  margin-left: 120px;
+  margin-top: 30px;
+}
+
+::ng-deep .p-calendar,
+::ng-deep .p-dropdown {
+  width: 250px;
+}

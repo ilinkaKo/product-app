@@ -1,0 +1,10 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

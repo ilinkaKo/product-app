@@ -1,1 +1,32 @@
-<p>product-form works!</p>
+<div class="container">
+  <app-title [title]="mode === 'edit' ? 'PRODUCT.EDIT_PRODUCT' : 'PRODUCT.CREATE_PRODUCT'"></app-title>
+  <div class="wrapper">
+    <form [formGroup]="productForm" class="product-form">
+      <div class="product-form__item">
+        <label>{{'PRODUCT.NAME' | translate}}:</label>
+        <input type="text" pInputText formControlName="name">
+      </div>
+
+      <div class="product-form__item">
+        <label>{{'PRODUCT.IMAGE' | translate}}:</label>
+        <input type="text" pInputText formControlName="image">
+      </div>
+      <div class="product-form__item">
+        <label>{{'PRODUCT.PRICE' | translate}}:</label>
+        <input type="number" pInputText formControlName="price">
+      </div>
+
+      <div class="product-form__item">
+        <label>{{'PRODUCT.MANUFACTURER' | translate}}:</label>
+        <p-dropdown [options]="manufacturers" formControlName="manufacturer" placeholder="Select a manufacturer" optionLabel="name" [showClear]="true"></p-dropdown>
+      </div>
+
+      <div class="product-form__item">
+        <label>{{'PRODUCT.EXPIRY_DATE' | translate}}:</label>
+        <p-calendar inputId="basic" formControlName="expiryDate"></p-calendar>
+      </div>
+
+      <p-button class="btn-submit" label="{{'BUTTONS.SAVE' | translate}}" styleClass="p-button-secondary" (click)="onSubmit()"></p-button>
+      </form>
+  </div>
+</div>

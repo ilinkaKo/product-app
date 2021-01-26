@@ -1,1 +1,16 @@
-<p>side-nav works!</p>
+<nav class="side-nav">
+  <ul>
+    <li class="side-nav__item" [ngClass]="{'side-nav__item--active': selectedItem === 'products'}">
+      <a routerLink="/products" class="side-nav__link">
+        <img class="side-nav__link__img" src="assets/images/product.svg"/>
+        <span>{{'MENU.PRODUCTS' | translate}}</span>
+      </a>
+    </li>
+    <li class="side-nav__item" [ngClass]="{'side-nav__item--active': selectedItem === 'about-us'}">
+      <a routerLink="/about-us"  class="side-nav__link">
+        <img class="side-nav__link__img" src="assets/images/about-us.svg"/>
+        <span>{{'MENU.ABOUT_US' | translate}}</span>
+      </a>
+    </li>
+  </ul>
+</nav>

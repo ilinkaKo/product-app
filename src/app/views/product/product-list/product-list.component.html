@@ -1,1 +1,14 @@
-<p>product-list works!</p>
+<div class="container">
+  <app-title title="PRODUCT.PRODUCTS"></app-title>
+  <div class="wrapper">
+    <button pButton pRipple
+      type="button"
+      label="{{'PRODUCT.CREATE_PRODUCT' | translate}}"
+      class="p-button-outlined p-button-secondary btn-create"
+      routerLink="/product/create">
+    </button>
+    <div class="product-list">
+      <app-card *ngFor="let product of products" [product]="product" (deleteProduct)="deleteProduct($event)"></app-card>
+    </div>
+  </div>
+</div>

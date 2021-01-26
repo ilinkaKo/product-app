@@ -1,0 +1,22 @@
+{
+  "MENU": {
+    "PRODUCTS": "Products",
+    "ABOUT_US": "About us"
+  },
+  "PRODUCT": {
+    "PRODUCTS": "Products",
+    "CREATE_PRODUCT": "Create product",
+    "EDIT_PRODUCT": "Edit product",
+    "NAME": "Name",
+    "PRICE": "Price",
+    "MANUFACTURER": "Manufacturer",
+    "EXPIRY_DATE": "Expiry date",
+    "IMAGE": "Image"
+  },
+  "BUTTONS": {
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "SAVE": "Save",
+    "CANCEL": "Cancel"
+  }
+}
