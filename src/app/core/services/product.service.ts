@@ -26,9 +26,10 @@ export class ProductService {
 
   public editProduct(id: string, productData: Product): void {
     let product = this.getProductById(id);
-    product = {
-      ...product,
-      ...productData
-    };
+    product.name = productData.name;
+    product.image = productData.image;
+    product.price = productData.price;
+    product.manufacturer = productData.manufacturer;
+    product.expiryDate = productData.expiryDate;
   }
 }

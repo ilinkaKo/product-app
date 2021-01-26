@@ -7,6 +7,17 @@
   flex-direction: column;
   width: 150px;
 
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: row;
+    width: 100%;
+
+    ul {
+      display: flex;
+      width: 100%;
+      list-style: none;
+    }
+  }
+
   &__item {
     font-size: 18px;
     padding: 10px 15px;
@@ -14,6 +25,9 @@
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+
     &__img {
       margin-right: 10px;
     }
@@ -42,7 +56,6 @@
   &__link:visited {
     color: $color-grey-light-1;
     text-decoration: none;
-    display: block;
     position: relative;
     z-index: 10;
   }

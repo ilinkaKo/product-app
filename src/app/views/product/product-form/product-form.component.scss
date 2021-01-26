@@ -13,8 +13,17 @@
     align-items: center;
     margin: 10px 0;
 
+    @media only screen and (max-width: $bp-extra-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     label {
       width: 120px;
+
+      @media only screen and (max-width: $bp-extra-small) {
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -25,6 +34,10 @@
   border-radius: 10px;
   padding: 30px;
   display: flex;
+
+  @media only screen and (max-width: $bp-extra-small) {
+    width: 100%;
+  }
 }
 
 .p-inputtext {
@@ -32,11 +45,18 @@
   padding: 5px 10px;
 }
 
-::ng-deep   .p-button.p-button-secondary {
-  width: 250px;
-  margin-left: 120px;
-  margin-top: 30px;
+:host {
+  ::ng-deep   .p-button.p-button-secondary {
+    width: 250px;
+    margin-left: 120px;
+    margin-top: 30px;
+
+    @media only screen and (max-width: $bp-extra-small) {
+      margin-left: 0px;
+    }
+  }
 }
+
 
 ::ng-deep .p-calendar,
 ::ng-deep .p-dropdown {
