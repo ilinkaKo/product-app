@@ -26,7 +26,7 @@
         <p-calendar inputId="basic" formControlName="expiryDate"></p-calendar>
       </div>
 
-      <p-button class="btn-submit" label="{{'BUTTONS.SAVE' | translate}}" styleClass="p-button-secondary" (click)="onSubmit()"></p-button>
+      <p-button [disabled]="!productForm.valid"  class="btn-submit" label="{{'BUTTONS.SAVE' | translate}}" styleClass="p-button-secondary" (onClick)="onSubmit()"></p-button>
       </form>
   </div>
 </div>

@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { ProductService } from './core/services/product.service';
 import { CardComponent } from './views/product/product-list/card/card.component';
-import {ConfirmationService} from 'primeng/api';
+import { MessageService} from 'primeng/api';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -49,7 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ProductService, ConfirmationService],
+  providers: [ProductService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

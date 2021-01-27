@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
 import { products } from '../mocks/products.mock';
+import * as uuid from 'uuid';
 
 @Injectable()
 export class ProductService {
@@ -13,6 +14,10 @@ export class ProductService {
   }
 
   public addProduct(product: Product): void {
+    if(!product.image) {
+      product.image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ19aD8j537tcC2xCMHnch9M7WAVifMq4gNw&usqp=CAU';
+    }
+    product.id = uuid.v4();
     this.products.push(product);
   }
 

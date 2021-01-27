@@ -18,5 +18,4 @@ export class CardComponent implements OnInit {
   public onDelete(): void {
     this.deleteProduct.emit(this.product.id);
   }
-
 }

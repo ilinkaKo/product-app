@@ -22,3 +22,18 @@
   margin-bottom: 20px;
   margin-left: auto;
 }
+
+.button-section {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .p-toast .p-toast-message.p-toast-message-warn{
+  border-color: $color-grey-dark-5;
+  color:  $color-grey-dark-5;
+  background-color: $white;
+}
+
+::ng-deep .p-toast {
+  opacity: 1;
+}

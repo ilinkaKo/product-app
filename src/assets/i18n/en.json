@@ -17,6 +17,13 @@
     "DELETE": "Delete",
     "EDIT": "Edit",
     "SAVE": "Save",
-    "CANCEL": "Cancel"
+    "CANCEL": "Cancel",
+    "YES": "Yes",
+    "NO": "No"
+  },
+  "HOME": {
+    "YEARS_EXPERIENCE": "Years experience",
+    "HAPPY_CLIENTS": "Happy clients",
+    "PEOPLE_LIKES": "People likes"
   }
 }

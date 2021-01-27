@@ -8,11 +8,11 @@
   </div>
   <div>
     <label>{{'PRODUCT.EXPIRY_DATE' | translate}}:&nbsp;</label>
-    <span>{{product.expiryDate | date: 'dd.mm.yyyy'}}</span>
+    <span>{{product.expiryDate | date: 'dd.MM.yyyy'}}</span>
   </div>
   <div>
     <label>{{'PRODUCT.PRICE' | translate}}:&nbsp;</label>
-    <span class="semi-bold">{{product.price}}</span>
+    <span class="semi-bold">{{product.price}} €</span>
   </div>
   <ng-template pTemplate="footer">
     <div class="button-section">

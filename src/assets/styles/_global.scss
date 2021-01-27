@@ -18,6 +18,12 @@ p, ul {
   }
 }
 
+.mt- {
+  &4 {
+    margin-top: 4px;
+  }
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

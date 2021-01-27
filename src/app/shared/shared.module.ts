@@ -9,6 +9,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {CalendarModule} from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ToastModule} from 'primeng/toast';
 
 const COMPONENTS = [TitleComponent];
 
@@ -22,7 +23,8 @@ const MODULES = [
   InputTextModule,
   CalendarModule,
   DropdownModule,
-  ConfirmDialogModule
+  ConfirmDialogModule,
+  ToastModule
 ];
 
 @NgModule({

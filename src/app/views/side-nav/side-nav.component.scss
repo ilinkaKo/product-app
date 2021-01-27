@@ -20,13 +20,13 @@
 
   &__item {
     font-size: 18px;
-    padding: 10px 15px;
     position: relative;
   }
 
   &__link {
     display: flex;
     align-items: center;
+    padding: 10px 15px;
 
     &__img {
       margin-right: 10px;
