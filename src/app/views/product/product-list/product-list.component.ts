@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/core/services/product.service';
 import { Product } from 'src/app/core/models/product.model';
 import {MessageService} from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,9 @@ export class ProductListComponent implements OnInit {
   public products: Array<Product> = [];
   public productId: string;
   constructor(private productService: ProductService,
-    private messageService: MessageService) { }
+    private messageService: MessageService,
+    private translateService: TranslateService
+    ) { }
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
@@ -21,7 +24,7 @@ export class ProductListComponent implements OnInit {
   public deleteProduct(id: string): void {
     this.productId = id;
     this.messageService.clear();
-    this.messageService.add({key: 'c', sticky: true, severity:'warn', summary:'Are you sure you want to delete?'});
+    this.messageService.add({key: 'c', sticky: true, severity:'warn', summary:this.translateService.instant('MESSAGES.DELETE')});
   }
 
   onConfirm() {

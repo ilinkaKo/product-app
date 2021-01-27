@@ -25,5 +25,8 @@
     "YEARS_EXPERIENCE": "Years experience",
     "HAPPY_CLIENTS": "Happy clients",
     "PEOPLE_LIKES": "People likes"
+  },
+  "MESSAGES": {
+    "DELETE": "Are you sure you want to delete?"
   }
 }
